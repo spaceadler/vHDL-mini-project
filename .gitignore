@@ -1,0 +1,27 @@
+# 1. THE NUCLEAR OPTION: Ignore literally everything in the folder
+*
+
+# 2. ALLOW DIRECTORIES: Git must be allowed to see folders, or it can't look inside them
+!*/
+
+# 3. THE WHITELIST: Only allow these specific file extensions
+
+# Git files
+!.gitignore
+
+# Hardware Source Code
+!*.vhd
+!*.vhdl
+!*.v
+!*.sv
+
+# Critical Quartus Project Files
+!*.qpf
+!*.qsf
+
+# Timing Constraints & System Design
+!*.sdc
+!*.qsys
+
+# Quartus Archives (Included as requested)
+!*.qar
