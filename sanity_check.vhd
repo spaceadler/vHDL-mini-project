@@ -16,12 +16,12 @@ end entity sanity_check;
 architecture hardware of sanity_check is
 
     signal w_a          :   std_logic;                          -- the idea is that when the cable is not connected, it's in a floating state.
-    signal w_b          :   std_logic;                          -- in which, it's set to 1, which is the same value when it's connected to vcc.
-    signal w_cin        :   std_logic;                          -- so we invert that, to make sure it's ONLY "1" when it's connected to gnd.
+    signal w_b          :   std_logic;                          -- in which, it's set to 1 (with resistor), which is the same value as when it's connected to vcc.
+    signal w_cin        :   std_logic;                          -- so we invert that, making sure it's "1" ONLY when it's connected to ground terminal.
  
-    signal w_ab_x       :   std_logic;                          -- transfer wires for a xor b.
-    signal w_ab_a       :   std_logic;                          -- transfer wires for a and b.
-    signal w_abx_c_a    :   std_logic;                          -- transfer wires for (a xor b) and i_cin.
+    signal w_ab_x       :   std_logic;                          -- transfer wire for a xor b.
+    signal w_ab_a       :   std_logic;                          -- transfer wire for a and b.
+    signal w_abx_c_a    :   std_logic;                          -- transfer wire for (a xor b) and i_cin.
 
     signal w_s          :   std_logic;                          -- carry signal for the sum,
     signal w_cout       :   std_logic;                          -- as well as the carry bit.
