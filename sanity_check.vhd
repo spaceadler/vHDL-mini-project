@@ -42,6 +42,7 @@ begin
     o_s         <= not (w_s     and not (w_cout and w_s));      -- LED is on only if sum is 1 but carry is 0.   PIN_3
     o_cout      <= not (w_cout  and not (w_cout and w_s));      -- LED is on only if sum is 0 but carry is 1.   PIN_7
     o_cout_s_a  <= not (w_cout  and w_s);                       -- LED is on only if sum is 1 and carry is 1.   PIN_9
+
 end architecture hardware;
 
 -- Oh my god this took so much time to write and make sure is correct, the amount of times I wrote this
