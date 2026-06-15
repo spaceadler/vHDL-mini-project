@@ -51,10 +51,16 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_144 -to button
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to button
-set_location_assignment PIN_3 -to led
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name GENERATE_SVF_FILE ON
+set_location_assignment PIN_44 -to i_cin
+set_location_assignment PIN_7 -to o_cout
+set_location_assignment PIN_9 -to o_s
+set_location_assignment PIN_3 -to o_cout_s_a
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i_a
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i_b
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i_cin
+set_location_assignment PIN_40 -to i_a
+set_location_assignment PIN_42 -to i_b
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
