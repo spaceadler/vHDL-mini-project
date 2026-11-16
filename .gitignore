@@ -11,6 +11,7 @@
 
 # Documentation
 !README.md
+!CODEMAP.md
 
 # Hardware Source Code
 !*.vhd

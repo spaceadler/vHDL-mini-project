@@ -51,5 +51,7 @@ ghdl -a --std=08 sanity_check.vhd   # analyze only; there's no testbench in the 
 
 The pins live in `sanity_check.qsf`, with weak pull-ups on all three inputs. *(The comments in `sanity_check.vhd` have `o_s` and `o_cout_s_a` swapped: PIN_9 and PIN_3 above are what the `.qsf` actually assigns.)*
 
+**Codemap:** [CODEMAP.md](CODEMAP.md), the entities, ports and processes, generated from the code.
+
 ---
 *powered by logic, coffee, and many sleepless nights*
