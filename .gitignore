@@ -9,6 +9,9 @@
 # Git files
 !.gitignore
 
+# Documentation
+!README.md
+
 # Hardware Source Code
 !*.vhd
 !*.vhdl
