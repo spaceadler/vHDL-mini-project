@@ -13,7 +13,7 @@
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     a["i_a · PIN_40"] -->|not| wa[w_a]
     b["i_b · PIN_42"] -->|not| wb[w_b]
     c["i_cin · PIN_44"] -->|not| wc[w_cin]
