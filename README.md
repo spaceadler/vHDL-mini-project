@@ -40,13 +40,14 @@ Inputs read `1` when the jumper goes to ground. Exactly one LED lights for any n
 | 2 | 0 | 1 | `o_cout` |
 | 3 | 1 | 1 | `o_cout_s_a` |
 
-Checked exhaustively in GHDL (all 8 input combinations).
+`tb_sanity_check.vhd` checks all 8 input combinations against this table.
 
 ## Build
 
 ```bash
 # Quartus 13.0sp1: open sanity_check.qpf (or restore sanity_check.qar), compile, program over USB-Blaster
-ghdl -a --std=08 sanity_check.vhd   # analyze only; there's no testbench in the repo
+ghdl -a --std=08 sanity_check.vhd tb_sanity_check.vhd
+ghdl -e --std=08 tb_sanity_check && ghdl -r --std=08 tb_sanity_check   # prints PASS or the failing row
 ```
 
 The pins live in `sanity_check.qsf`, with weak pull-ups on all three inputs. *(The comments in `sanity_check.vhd` have `o_s` and `o_cout_s_a` swapped: PIN_9 and PIN_3 above are what the `.qsf` actually assigns.)*
